@@ -26,7 +26,7 @@
 - [Session #3 - ConversationalAI - Hands-on](/day1/conversationalai-handson)
 
 ### 📅 Day 2
-- [Session #1 - TYOM / BYOM - Hands-On](/day1/tyom-byom)
+- [Session #1 - TYOM / BYOM - Hands-On](/day2/tyom-byom-hands-on)
 
 ### 📅 Day 3
 - No content
