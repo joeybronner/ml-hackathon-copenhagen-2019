@@ -1,0 +1,12 @@
+---
+applications:
+- name: byom
+  host: ml-train-us112-byom
+  memory: 256M
+  disk_quota: 1028M
+  timeout: 60
+  buildpack: python_buildpack
+services:
+- ml_instance_2806
+env:
+  MLF_SERVICE: ml-foundation

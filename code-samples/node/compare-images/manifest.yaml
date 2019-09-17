@@ -1,0 +1,10 @@
+---
+applications:
+
+- name: image-compare
+  host: image-compare
+  buildpack: nodejs_buildpack
+  memory: 512M
+  command: node server.js
+  instances: 1
+  random-route: true

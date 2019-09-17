@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+<script type="text/javascript">
+
+
+function init(){
+	var canvas = document.getElementById("canvas"),
+	    ctx = canvas.getContext("2d");
+
+	document.getElementById('inp').onchange = function(e) {
+	  var img = new Image();
+	  img.onload = draw;
+	  img.onerror = failed;
+	  img.src = URL.createObjectURL(this.files[0]);
+
+
+	    var formData = new FormData();
+	    formData.append("image", this.files[0]);
+
+	    var request = new XMLHttpRequest();
+
+	      request.onreadystatechange = function() {
+	        if (request.readyState === 4) {
+	          var data = JSON.parse(request.response);
+	          console.log(data)
+	          drawBounds(document.getElementById('canvas').getContext('2d'), data.predictions);
+	        }
+	      }
+
+	    request.open("POST", "/api/sceneTextRecognition");
+	    request.send(formData);
+
+	};
+	
+}
+
+function drawBounds(ctx, predictions){
+	for (var i = 0; i < predictions.length; i++) {
+		var txt = document.getElementById("textVersionDiv")
+		
+		var bounds = predictions[i].results;
+		for (var j = 0; j < bounds.length; j++) {
+			var bound = bounds[j].boundingBox;
+			var p = document.createElement("p");
+			p.innerHTML = bounds[j].text;
+			txt.appendChild(p)
+
+			ctx.strokeStyle="green";
+			ctx.rect(bound.x1, bound.y1, bound.x2 - bound.x1, bound.y3 - bound.y1);
+			ctx.stroke();
+		}
+	}
+}
+
+function draw() {
+  var canvas = document.getElementById('canvas');
+  canvas.width = this.width / 2;
+  canvas.height = this.height / 2;
+  var ctx = canvas.getContext('2d');
+  //ctx.rotate(90 * Math.PI/180);
+  ctx.scale(0.5, 0.5)
+  ctx.drawImage(this, 0,0);
+}
+
+function failed() {
+  console.error("The provided file couldn't be loaded as an Image media");
+}
+
+</script>
+
+</head>
+
+
+
+<body onload="init()">
+
+
+<input type="file" id="inp">
+<canvas id="canvas" style="width: 50%"></canvas>
+
+<div id="textVersionDiv"></div>
+
+
+</body>
+</html>

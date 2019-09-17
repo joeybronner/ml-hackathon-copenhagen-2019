@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="/jquery.js"></script>
+	<script type="text/javascript">
+
+	function detect(){
+		var input = document.getElementById("textSource").value;
+		if(input){
+			$.post( "/api/detect", JSON.stringify({message: input}), function( data ) {
+				var detection =JSON.parse(data).detections[0];//assume the first and take it.
+				var msg = detection.langStr + " (" + detection.langCode + ")";
+				document.getElementById("textReceive").value = msg;
+			});
+		}
+	}
+
+	function translate(){
+		//Excercise: try to make this application translate the text to another language.
+	}
+
+	</script>
+</head>
+<body>
+
+	<h1>Introduction</h1>
+	<p>The following code detects the language of a text by calling a small server that proxies the request to the LML API.</p>
+	<div>
+		<textarea rows="4" cols="50" name="send" id="textSource"></textarea>
+		<input type="button" name="detect" name="detect" id="detect" value="Detect" onclick="javascript:detect()">
+		<textarea rows="4" cols="50" name="send" id="textReceive"></textarea>
+	</div>
+
+	<h2>Excercise </h2>
+	<p>The goal is to do as above but for the Translation Service. Keep it simple and fix the source and target language.</p>
+
+	<h2>Bonus</h2>
+	<p>Let the user determine the target language based on the detected source language.</p>
+
+</body>
+</html>
+

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.smaller {
+    width: 150px;
+    height: 150px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.form.min.js"></script>
+
+<script type="text/javascript">
+    
+    function getImages(){
+        $.get( "/api/gems", function( data ) {
+              var files = JSON.parse(data);
+              var count = 0;
+              for (var i = 0; i < files.length; i++) {
+                  var file = files[i];
+                  if(file.includes("jpg") || file.includes("png")){
+                    var figure = document.createElement("figure");
+                    var img = document.createElement('img');
+                    figure.appendChild(img);
+                    img.setAttribute("src", "/gems/" + file);
+                    img.setAttribute("class", "smaller")
+                    figure.setAttribute("id", file)
+                    count++;
+                    count > 4 ? count = 1 : count = count;
+                    if(count === 1){
+                        document.getElementById("one").appendChild(figure);
+                    }else if(count === 2){
+                        document.getElementById("two").appendChild(figure);
+                    }else if(count === 3){
+                        document.getElementById("three").appendChild(figure);
+                    }else if(count === 4){
+                        document.getElementById("four").appendChild(figure);
+                    }
+
+                  }
+              }
+        });
+    }
+
+    // pre-submit callback
+    function showRequest(formData, jqForm, options) {
+        console.log('Uploading is starting.');
+        return true;
+    }
+
+    // post-submit callback
+    function showResponse(responseText, statusText, xhr, $form) {
+        console.log('status: ' + statusText + '\n\nresponseText: \n' + responseText );
+        var parts = document.getElementById("file").value.split("\\")
+        var file = parts[parts.length - 1];
+        var image = document.getElementById('imageTag');
+        image.setAttribute("src", "/uploads/" + file)
+        image.setAttribute("class", "smaller")
+    }
+
+    function uploadFile() {
+        var blobFile = document.getElementById("filechooser").files[0];
+
+        var sourceName = blobFile.name;
+
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(blobFile);
+
+        var formData = new FormData();
+        formData.append("image", blobFile);
+
+        var request = new XMLHttpRequest();
+
+          request.onreadystatechange = function() {
+            if (request.readyState === 4) {
+              var data = JSON.parse(request.response);
+              console.log(data);
+              //get the prediction that maps to your source file
+              //and get the scores for the rest.
+              for (var i = 0; i < data.predictions.length; i++) {
+                  if(data.predictions[i].id.startsWith(sourceName)){
+                    var similar = data.predictions[i].similarVectors;
+                    similar.forEach(function(d){
+                        if(d.id.endsWith(".txt")){
+                            var realName = d.id.substring(0, d.id.length - 4);
+                            var figcaption = document.createElement("figcaption");
+                            var dScore = d.score.toFixed(3)
+                            figcaption.appendChild(document.createTextNode(dScore));
+                            if(document.getElementById(realName)){
+                                document.getElementById(realName).appendChild(figcaption)    
+                            }else{
+                                console.log("element with " + realName + " not found")
+                            }
+                            
+                        }
+                    });
+                  }
+              }
+            }
+          }
+
+        request.open("POST", "/api/imageCompare");
+        request.send(formData);
+    }
+
+</script>
+
+<body onload="getImages()">
+
+<!-- Header -->
+<div class="header">
+  <h1>Gem Search</h1>
+  <p>Upload an image</p>
+</div>
+
+<form id="uploadForm" enctype="multipart/form-data" action="/upload" method="post" onsubmit="return false">
+    <input type="file" accept="image/*" onchange="uploadFile()" id="filechooser">
+</form>
+<img id="output"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    var options = {
+        beforeSubmit: showRequest,  // pre-submit callback
+        success: showResponse  // post-submit callback
+    };
+  };
+</script>
+
+
+<div>
+   <img src="" id="imageTag" />
+</div>
+
+<h2>Catalog</h2>
+<!-- Photo Grid -->
+<div class="row" id="row"> 
+    <div class="column" id="one"></div> 
+    <div class="column" id="two"></div>
+    <div class="column" id="three"></div>
+    <div class="column" id="four"></div>
+</div>
+
+</body>
+</html>
