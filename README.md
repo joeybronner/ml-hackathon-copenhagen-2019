@@ -1,22 +1,22 @@
-<h1 align="center">SAP Nordic Machine Learning Hackathon 2019</h1>
+<p align="center">
+  <a href="https://coil.sap.com">
+    <img src="https://i.ibb.co/R9v8BcH/Stickers-Hackathon-Event.png" alt="SAP Nordic ML Hackathon Image" width=128 height=128>
+  </a>
 
-<div align="center">
-  🇩🇰Copenhagen
-</div>
+  <h3 align="center">SAP Nordic Machine Learning Hackathon 2019</h3>
+
+  <p align="center">
+    Short description
+    <br>
+    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=bug.md">Report bug</a>
+    ·
+    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=feature.md&labels=feature">Request feature</a>
+    ·
+    <a href="https://coil.sap.com">COIL Website</a>
+  </p>
+</p>
 
 <br />
-
-<div align="center">
-  <h3>
-    <a href="https://coil.sap.com">
-      Website
-    </a>
-    <span> | </span>
-    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019">
-      GitHub Repo
-    </a>
-  </h3>
-</div>
 
 ## Table of Contents
 
@@ -31,15 +31,7 @@
 ### 📅 Day 3
 - No content
 
-## Support
-
-/* TODO */
-
-### Sponsors
-
-/* TODO */
-
-### Coachs
+## Contacts
 
 - [Miliau PAPE](mailto:miliau.pape@sap.com)
 - [Peter SNOWDON](mailto:peter.snowdon@sap.com)
