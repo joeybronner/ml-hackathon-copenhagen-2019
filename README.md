@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://coil.sap.com">
-    <img src="https://i.ibb.co/R9v8BcH/Stickers-Hackathon-Event.png" alt="SAP Nordic ML Hackathon Image" width=128 height=128>
+    <img src="https://i.ibb.co/R9v8BcH/Stickers-Hackathon-Event.png" alt="SAP Nordic ML Hackathon Image" width=256 height=256>
   </a>
 
   <h3 align="center">SAP Nordic Machine Learning Hackathon 2019</h3>
