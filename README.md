@@ -6,7 +6,7 @@
   <h3 align="center">SAP Nordic Machine Learning Hackathon 2019</h3>
 
   <p align="center">
-    Short description
+    Please note that these are examples for the purposes of training only. This repository will not be supported or maintained. Under code samples there are some simple examples that will be used to show how you can use LML in your applications.
     <br>
     <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=bug.md">Report bug</a>
     ·
