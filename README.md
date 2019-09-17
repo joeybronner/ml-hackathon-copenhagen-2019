@@ -1,10 +1,52 @@
-# ML Hackathon 🇩🇰Copenhagen 2019
+<h1 align="center">SAP Nordic Machine Learning Hackathon 2019</h1>
 
-Please note that these are examples for the purposes of training only. This repository will not be supported or maintained. 
+<div align="center">
+  🇩🇰Copenhagen
+</div>
 
-Under code samples there are some simple examples that will be used to show how you can use LML in your applications.
+<br />
 
-Postman contains collections that you can import to test the services. Note that you will need to create an environment with:
+<div align="center">
+  <h3>
+    <a href="https://coil.sap.com">
+      Website
+    </a>
+    <span> | </span>
+    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019">
+      GitHub Repo
+    </a>
+  </h3>
+</div>
 
-- LML_OAUTH_TOKEN: this can be left empty as it will be filled in automatically
-- API_KEY: this needs to be set to the key that you can get from SAP API hub.
+## Table of Contents
+
+### 📅 Day 1
+- [Session #1 - Machine Learning Services - Hands-on](/day1/mlservices-handson)
+- [Session #2 - TYOM / BYOM](/day1/tyom-byom)
+- [Session #3 - ConversationalAI - Hands-on](/day1/conversationalai-handson)
+
+### 📅 Day 2
+- [Session #1 - TYOM / BYOM - Hands-On](/day1/tyom-byom)
+
+### 📅 Day 3
+- No content
+
+## Support
+
+/* TODO */
+
+### Sponsors
+
+/* TODO */
+
+### Coachs
+
+- [Miliau PAPE](mailto:miliau.pape@sap.com)
+- [Peter SNOWDON](mailto:peter.snowdon@sap.com)
+- [Nathalie DIETZ](mailto:nathalie.dietz@sap.com)
+- [Wael LABIDI](mailto:wael.labidi@sap.com)
+- [Joey BRONNER](mailto:joey.bronner@sap.com)
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license)
