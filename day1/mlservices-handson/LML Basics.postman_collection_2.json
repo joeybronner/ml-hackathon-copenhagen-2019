@@ -1,0 +1,285 @@
+{
+	"info": {
+		"_postman_id": "88229494-83c2-4203-a958-18fe75e6133d",
+		"name": "LML Basics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Detect Language",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "APIKey",
+						"value": "{{API_KEY}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"this is a string\"\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/ml/api/v2alpha1/text/lang-detect/",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"ml",
+						"api",
+						"v2alpha1",
+						"text",
+						"lang-detect",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detect Language Oauth",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{LML_OAUTH_TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"this is a string\"\n}"
+				},
+				"url": {
+					"raw": "https://mlftrial-language-detection.cfapps.eu10.hana.ondemand.com/api/v2alpha1/text/lang-detect/",
+					"protocol": "https",
+					"host": [
+						"mlftrial-language-detection",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2alpha1",
+						"text",
+						"lang-detect",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Translate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "APIKey",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"sourceLanguage\": \"en\",\n  \"targetLanguages\": [\n    \"de\",\n    \"fr\"\n  ],\n  \"units\": [\n    {\n      \"value\": \"The shopping cart contains ten items.\",\n      \"key\": \"CART_CONTENTS\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/mlfs/api/v2/text/translation",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"mlfs",
+						"api",
+						"v2",
+						"text",
+						"translation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "People Detection",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "APIKey",
+						"type": "text",
+						"value": "{{API_KEY}}"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "file"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://sandbox.api.sap.com/ml/api/v2alpha1/image/human-detection/",
+					"protocol": "https",
+					"host": [
+						"sandbox",
+						"api",
+						"sap",
+						"com"
+					],
+					"path": [
+						"ml",
+						"api",
+						"v2alpha1",
+						"image",
+						"human-detection",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "oauth token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bc7dfe55-1f11-4e9d-8252-f41d06e81f0e",
+						"exec": [
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.environment.set(\"LML_OAUTH_TOKEN\", jsonData.access_token);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "{{USER_NAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://i051802trial.authentication.eu10.hana.ondemand.com/oauth/token?grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"i051802trial",
+						"authentication",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local Bearer version",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"message\": \"this is a string\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:1666/api/bearer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1666",
+					"path": [
+						"api",
+						"bearer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
