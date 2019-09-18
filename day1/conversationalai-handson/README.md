@@ -37,12 +37,12 @@
 3.	We now see this screen:
 <img src="img/step2-creationbot.png" />
 4.	For this exercise, please select:  
-- Greetings for predefined skills
-- Name your bot: Utility Workshop Bot (for example)
-- Topics: Customer support (for example)
-- Data Policy: Non-personal
-- End Users: Non-vulnerable 
-- Bot visibility: Private
+* Greetings for predefined skills
+* Name your bot: Utility Workshop Bot (for example)
+* Topics: Customer support (for example)
+* Data Policy: Non-personal
+* End Users: Non-vulnerable 
+* Bot visibility: Private
 
 **Important to select Private or bot will be shared with community!**  
 
