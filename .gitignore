@@ -1,0 +1,10 @@
+# git ignore  #
+###################
+*/.settings/*
+**/node_modules
+*/.classpath
+*/.project
+npm-debug.log
+package-lock.json
+.DS_Store
+.env
