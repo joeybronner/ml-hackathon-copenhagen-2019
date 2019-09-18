@@ -30,3 +30,26 @@
 
 <a name="step2"></a>
 ## Step 2 - Workshop exercice
+
+1.	Copy [cps-image.jpg](/html-skeleton/cps-image.jpg) and [cps_mocked.html](/html-skeleton/cps_mocked.html) files.  
+2.	Select +New BOT  
+<img src="img/step2-newbot.png" />
+3.	We now see this screen:
+<img src="img/step2-creationbot.png" />
+4.	For this exercise, please select:  
+- Greetings for predefined skills
+- Name your bot: Utility Workshop Bot (for example)
+- Topics: Customer support (for example)
+- Data Policy: Non-personal
+- End Users: Non-vulnerable 
+- Bot visibility: Private
+
+**Important to select Private or bot will be shared with community!**  
+
+5.	Select CREATE A BOT. This will take a short time to create. We should now see the following:  
+<img src="img/step2-botcreated.png" />
+
+
+
+
+
