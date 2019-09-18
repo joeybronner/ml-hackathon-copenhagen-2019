@@ -8,15 +8,21 @@
 
 <br />
 
+## Agenda
+
+<img src="img/agenda_overview.png" />
+
 ## Table of Contents
 
 ### 👉Steps
+- [Agenda](#agenda)
 - [Table of Contents](#table-of-contents)
   - [👉Steps](#%f0%9f%91%89steps)
 - [Step 1 - Account creation](#step-1---account-creation)
 - [Step 2 - Workshop exercice](#step-2---workshop-exercice)
 
 <a name="step1"></a>
+
 ## Step 1 - Account creation
 
 1.	Go to this website: https://cai.tools.sap  
@@ -31,6 +37,7 @@
 <img src="img/step1-dashboard.png" />
 
 <a name="step2"></a>
+
 ## Step 2 - Workshop exercice
 
 1.	Copy [cps-image.jpg](/html-skeleton/cps-image.jpg) and [cps_mocked.html](/html-skeleton/cps_mocked.html) files.  
@@ -51,8 +58,4 @@
 
 5.	Select CREATE A BOT. This will take a short time to create. We should now see the following:  
 <img src="img/step2-botcreated.png" />
-
-
-
-
 
