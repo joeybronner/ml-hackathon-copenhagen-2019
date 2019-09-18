@@ -8,14 +8,9 @@
 
 <br />
 
-## Agenda
-
-<img src="img/agenda_overview.png" />
-
 ## Table of Contents
 
 ### 👉Steps
-- [Agenda](#agenda)
 - [Table of Contents](#table-of-contents)
   - [👉Steps](#%f0%9f%91%89steps)
 - [Step 1 - Account creation](#step-1---account-creation)
