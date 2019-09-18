@@ -11,8 +11,10 @@
 ## Table of Contents
 
 ### 👉Steps
-- [Step #1 - Account creation](#step1)
-- [Step #2 - Workshop exercice](#step2)
+- [Table of Contents](#table-of-contents)
+  - [👉Steps](#%f0%9f%91%89steps)
+- [Step 1 - Account creation](#step-1---account-creation)
+- [Step 2 - Workshop exercice](#step-2---workshop-exercice)
 
 <a name="step1"></a>
 ## Step 1 - Account creation
@@ -37,12 +39,13 @@
 3.	We now see this screen:
 <img src="img/step2-creationbot.png" />
 4.	For this exercise, please select:  
-* Greetings for predefined skills
-* Name your bot: Utility Workshop Bot (for example)
-* Topics: Customer support (for example)
-* Data Policy: Non-personal
-* End Users: Non-vulnerable 
-* Bot visibility: Private
+
+ * Greetings for predefined skills  
+ * Name your bot: Utility Workshop Bot *(for example)*  
+ * Topics: Customer support *(for example)*  
+ * Data Policy: Non-personal  
+ * End Users: Non-vulnerable  
+ * Bot visibility: Private  
 
 **Important to select Private or bot will be shared with community!**  
 
