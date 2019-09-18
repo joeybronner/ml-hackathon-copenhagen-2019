@@ -18,6 +18,10 @@
 
 <br />
 
+## Agenda
+
+<img src="img/agenda_overview.png" />
+
 ## Table of Contents
 
 ### 📅 Day 1
