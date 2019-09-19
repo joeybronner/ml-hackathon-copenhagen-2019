@@ -42,7 +42,7 @@
 2.	Select **+ New BOT**  
 <img src="img/step1-newbotbutton.png" />
 3.	We now see this screen:  
-<img src="img/step2-creationbot.png" />
+<img src="img/step1-signup.png" />
 4.	For this exercise, please select:  
 
  * Greetings for predefined skills  
