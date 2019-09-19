@@ -29,8 +29,7 @@
 2.	If you get the cookie sign, just click ok to close it.  
 3.	Click on the yellow sign up button. You will get a sign-up form as follows:  
 <img src="img/step1-signupform.png" />
-4.	Fill up the form as requested, check the boxes below and click sign up at the lower part of your screen:  
-<img src="img/step1-signup.png" />
+4.	Fill up the form as requested
 5.	You will receive a welcome message
 6.	Once you click outside the grey welcome box, you will see your Dashboard:  
 <img src="img/step1-dashboard.png" />
