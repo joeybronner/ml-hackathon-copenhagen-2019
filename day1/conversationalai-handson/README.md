@@ -41,7 +41,7 @@
 
 1.	Copy [cps-image.jpg](/html-skeleton/cxc-image.jpg) and [cps_mocked.html](/html-skeleton/cxc_mocked.html) files.  
 2.	Select **+ New BOT**  
-<img src="img/step2-newbot.png" />
+<img src="img/step1-newbotbutton.png" />
 3.	We now see this screen:  
 <img src="img/step2-creationbot.png" />
 4.	For this exercise, please select:  
