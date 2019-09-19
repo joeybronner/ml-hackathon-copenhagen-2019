@@ -16,7 +16,7 @@
 - [Step 1 - Account creation](#step-1---account-creation)
 - [Step 2 - Workshop exercice](#step-2---workshop-exercice)
 
-<a name="step1"></a>
+<a name="step-1---account-creation"></a>
 
 ## Step 1 - Account creation
 
@@ -31,7 +31,7 @@
 6.	Once you click outside the grey welcome box, you will see your Dashboard:  
 <img src="img/step1-dashboard.png" />
 
-<a name="step2"></a>
+<a name="step-2---workshop-exercice"></a>
 
 ## Step 2 - Workshop exercice
 
