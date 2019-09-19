@@ -65,7 +65,7 @@
 2.	Type in who are you shown below and click on SEARCH  
 3.	I can know select an intent from the list.  
 
-<img src="img/step3-forking.png" />
+<img src="img/step3-listofintents.png" />
 
 1. I&#39;ve selected an intent that has an expression &quot;are you a bot&quot; listed.  
 2. Click on **FORK.**  
