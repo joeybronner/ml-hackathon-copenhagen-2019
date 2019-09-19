@@ -12,6 +12,10 @@
 
 ### 👉Steps
 
+- [Step 1 - Account creation](#step-1---account-creation)
+- [Step 2 - Workshop exercice](#step-2---workshop-exercice)
+- [Step 3 - Forking an intent](#step-3---forking-an-intent)
+- [Step 4 - Building Skills](#step-4---building-skills)
 - [Step 5 - Configuring a skill](#step-5---configuring-a-skill)
 - [Step 6 - Testing and improving](#step-6---testing-and-improving)
 - [Step 7 - Setting up skills actions](#step-7---setting-up-skills-actions)
@@ -19,7 +23,7 @@
 
 <a name="step-1---account-creation"></a>
 
-## Step 1 - Account creation
+# Step 1 - Account creation
 
 1.	Go to this website: https://cai.tools.sap  
 2.	If you get the cookie sign, just click ok to close it.  
@@ -34,7 +38,7 @@
 
 <a name="step-2---workshop-exercice"></a>
 
-## Step 2 - Workshop exercice
+# Step 2 - Workshop exercice
 
 1.	Copy [cps-image.jpg](/html-skeleton/cps-image.jpg) and [cps_mocked.html](/html-skeleton/cps_mocked.html) files.  
 2.	Select +New BOT  
@@ -57,7 +61,7 @@
 
 <a name="step-3---forking-an-intent"></a>
 
-## Step 3 - Forking an intent
+# Step 3 - Forking an intent
 
 1.	Let’s add another intent so that the bot will be able to answer- who are you? It’s possible to search in the community for this intent!  
 2.	Type in who are you shown below and click on SEARCH  
@@ -91,7 +95,7 @@
 
 <a name="step-4---building-skills"></a>
 
-## Step 4 - Building Skills
+# Step 4 - Building Skills
 
 1. Click on the **Build tab** shown here:  
 
