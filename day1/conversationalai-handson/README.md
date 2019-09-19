@@ -10,7 +10,7 @@
 
 ## Table of Contents
 
-### 👉Steps
+### 👉 Steps
 
 - [Step 1 - Account creation](#step-1---account-creation)
 - [Step 2 - Workshop exercice](#step-2---workshop-exercice)
@@ -31,8 +31,7 @@
 <img src="img/step1-signupform.png" />
 4.	Fill up the form as requested, check the boxes below and click sign up at the lower part of your screen:  
 <img src="img/step1-signup.png" />
-5.	You will receive a welcome message like the one below:  
-<img src="img/step1-welcome.png" />
+5.	You will receive a welcome message
 6.	Once you click outside the grey welcome box, you will see your Dashboard:  
 <img src="img/step1-dashboard.png" />
 
@@ -40,8 +39,8 @@
 
 # Step 2 - Workshop exercice
 
-1.	Copy [cps-image.jpg](/html-skeleton/cps-image.jpg) and [cps_mocked.html](/html-skeleton/cps_mocked.html) files.  
-2.	Select +New BOT  
+1.	Copy [cps-image.jpg](/html-skeleton/cxc-image.jpg) and [cps_mocked.html](/html-skeleton/cxc_mocked.html) files.  
+2.	Select **+ New BOT**  
 <img src="img/step2-newbot.png" />
 3.	We now see this screen:  
 <img src="img/step2-creationbot.png" />
@@ -67,16 +66,15 @@
 2.	Type in who are you shown below and click on SEARCH  
 3.	I can know select an intent from the list.  
 
-<img src="img/step3-forkintent.png" />
+<img src="img/step3-forking.png" />
 
-1. I&#39;ve selected an intent that has an expression &quot;are you a bot?&quot; listed.  
+1. I&#39;ve selected an intent that has an expression &quot;are you a bot&quot; listed.  
 2. Click on **FORK.**  
 3. I should now see three intents creates **@wru** , **@goodbye** , and **@greetings** shown below.  
 
 <img src="img/step3-listofintents.png" />
-<img src="img/step3-whoareyou.png" />
 
-4. Let's now look at **TEST** and **CHAT WITH YOUR BOT**. These can be found on the right-hand side of your screen shown here:  
+1. Let's now look at **TEST** and **CHAT WITH YOUR BOT**. These can be found on the right-hand side of your screen shown here:  
 
 <img src="img/step3-test.png" />
 
