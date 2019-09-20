@@ -35,7 +35,7 @@
 5.	You will receive a welcome message
 6.	Once you click outside the grey welcome box, you will see your Dashboard:  
 
-<img src="img/step1-dashboard.png" />
+<img src="img/dashboard.png" />
 
 <a name="step-2---workshop-exercice"></a>
 
