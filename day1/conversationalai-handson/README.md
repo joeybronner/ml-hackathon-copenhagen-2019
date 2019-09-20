@@ -59,7 +59,7 @@
 
 5.	Select **CREATE A BOT**. This will take a short time to create. We should now see the following:   
 
-<img src="img/step2-botcreated.png" />
+<img src="img/botcreated.png" />
 
 <a name="step-3---forking-an-intent"></a>
 
@@ -71,18 +71,18 @@
 
 <img src="img/step3-intent.png" />
 
-4. I've selected an intent that has an expression "*are you a bot*" listed.  
-5. Click on **FORK.**  
-6. I should now see three intents creates **@wru** , **@goodbye** , and **@greetings** shown below.  
+1. I've selected an intent that has an expression "*are you a bot*" listed.  
+2. Click on **FORK.**  
+3. I should now see three intents creates **@wru** , **@goodbye** , and **@greetings** shown below.  
 
 <img src="img/step3-listofintents.png" />
 
 7. Let's now look at **TEST** and **CHAT WITH YOUR BOT**. These can be found on the right-hand side of your screen shown here:  
 
-<img src="img/step3-test.png" />
+<img src="img/testbot.png" />
 
-8. Click on **TEST.**  
-9. Type in **are you a bot?**  
+1. Click on **TEST.**  
+2. Type in **are you a bot?**  
 
  <img src="img/step3-areyouabot.png" />
 
