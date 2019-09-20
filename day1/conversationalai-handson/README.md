@@ -129,17 +129,17 @@
 2. Click on the **Triggers**  
 3. You should see the following:  
 
-<img src="img/step5-configuring.png" />
+<img src="img/configuring.png" />
 
-4. Click on the **+** shown here:  
+1. Click on the **+** shown here:  
 
-<img src="img/step5-addcondition.png" />
+<img src="img/plussss.png" />
 
-5. You will see an If logic box **click** n the blank area, and a box will appear.  
-6. Click on @wru and click **Save**  
-7. You should now see the following:  
+1. You will see an If logic box **click** n the blank area, and a box will appear.  
+2. Click on @wru and click **Save**  
+3. You should now see the following:  
 
-<img src="img/step5-or.png" />
+<img src="img/wruu.png" />
 
 8. Click on the **Actions** Tab.  
 9. We want to click on the bottom **ADD NEW MESSAGE GROUP.**  
@@ -149,13 +149,13 @@
 13. Click on **Text**  
 14. I typed in the following:  
 
-<img src="img/step5-addmessage.png" />
+<img src="img/hipizzabot.png" />
 
-15. Make sure to click on SAVE to save the response.  
-16. Clicking on the **+** above this response I can add additional responses that will be chosen at random if desired.  
-17. I now have:  
+1.  Make sure to click on SAVE to save the response.  
+2.  Clicking on the **+** above this response I can add additional responses that will be chosen at random if desired.  
+3.  I now have:  
 
-<img src="img/step5-ifelse.png" />
+<img src="img/orcondition.png" />
 
 <a name="step-6---testing-and-improving"></a>
 
@@ -171,16 +171,16 @@
 5. Click on the **Train tab** on the top.  
 6. Click on **+ Create** Intent shown below.  
 
-<img src="img/step6-createnew.png" />
+<img src="img/createintent.png" />
 
 7. Let's name this intent **order-a-pizza**.  
 8. **Click** on **order-a-pizza** intent.  
 
-<img src="img/step6-paymybill.png" />
+<img src="img/newintentcreated.png" />
 
 9. Add several expressions related to ordering a pizza.  
 
-<img src="img/step6-addexpressions.png" />
+<img src="img/addexpression.png" />
 
 10. Let's now create a **order-a-pizza**** Skill.**   
 11. **Click** on **Build Tab.**  
@@ -190,7 +190,7 @@
 15. **Click** on **CREATE SKILL.**  
 16. You can use the cross located in the top right of each skill to rearrange skills to your liking.
 
-<img src="img/step6-builder.png" />
+<img src="img/builderwithpizza.png" />
 
 1.  **Click** on **order-a-pizza.**  
 2.  **Click** on **Triggers tab.**  
@@ -198,7 +198,7 @@
 4.  Click on @order-a-pizza-intent and click **Save.**  
 5.  You should now see the following:  
 
-<img src="img/step6-ifpaymybillthen.png" />
+<img src="img/iforderpizza.png" />
 
 <a name="step-7---setting-up-skills-actions"></a>
 
