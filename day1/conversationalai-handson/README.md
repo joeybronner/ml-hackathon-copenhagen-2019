@@ -41,7 +41,7 @@
 
 # Step 2 - Workshop exercice
 
-1.	Copy [sappizza.png](/html-skeleton/sappizza.png) and [sappizza.html](/html-skeleton/sappizza.html) files.  
+1.	Copy [sappizza.png](html-skeleton/sappizza.png) and [sappizza.html](html-skeleton/sappizza.html) files.  
 2.	Select **+ New BOT**  
 <img src="img/step1-newbotbutton.png" />
 3.	We now see this screen:  
