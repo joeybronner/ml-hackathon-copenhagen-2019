@@ -243,26 +243,26 @@
 
 1.  Click on the **Connect**  
 
-<img src="img/step8-deployment.png" />
+<img src="img/connect.png" />
 
-2. **Click** on **Webchat.**  
-3. **The following box will display:**  
+1. **Click** on **Webchat.**  
+2. **The following box will display:**  
 
-<img src="img/step8-webchat.png" />
+<img src="img/webchat.png" />
 
-4. **Click on Color Scheme.**  
-5. I want to match colors like CPS site- Change **Accent Color** to Blue.  
-6. Under **Header customization** , change **Header title** to CPS Chatbot.  
-7. Under **Message Settings** add a **Welcome Message** - &quot;Hello, welcome to the CPS Energy website! Please let me know how I can assist you.&quot;  
-8. Click on **CREATE**.  
-9. Open the CPS\_Mocked.html copied in Step 1 with an HTML Editor. (Notepad works fine.)  
-10. Copy the **channelID** found under **Webchat Script.**  
+1. **Click on Color Scheme.**  
+2. I want to match colors like CPS site- Change **Accent Color** to Blue.  
+3. Under **Header customization** , change **Header title** to CPS Chatbot.  
+4. Under **Message Settings** add a **Welcome Message** - &quot;Hello, welcome to the CPS Energy website! Please let me know how I can assist you.&quot;  
+5. Click on **CREATE**.  
+6. Open the CPS\_Mocked.html copied in Step 1 with an HTML Editor. (Notepad works fine.)  
+7.  Copy the **channelID** found under **Webchat Script.**  
 
-<img src="img/step8-channelid.png" />
+<img src="img/script.png" />
 
-11. **Paste channelID** into the CPS\_Mocked.html file replacing **&quot;ENTER Channel ID Here&quot;.**  
-12. Repeat same process for **token.**  
-13. You should now have: **(Your channelID and token will be different, make sure to         change or you will not be pointing to the bot you worked so hard at!)**  
+1.  **Paste channelID** into the CPS\_Mocked.html file replacing **&quot;ENTER Channel ID Here&quot;.**  
+2.  Repeat same process for **token.**  
+3.  You should now have: **(Your channelID and token will be different, make sure to         change or you will not be pointing to the bot you worked so hard at!)**  
 
 <img src="img/html.png" />  
 
