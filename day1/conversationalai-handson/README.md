@@ -226,13 +226,13 @@
 20. **Click SAVE.**  
 21. **You should now see:**  
 
-<img src="img/step7-formresponse.png" />
+<img src="img/buttons.png" />
 
-22. Let's test our changes- click on **CHAT WITH YOUR BOT.**  
+1.  Let's test our changes- click on **CHAT WITH YOUR BOT.**  
 
-<img src="img/step7-forminchat.png" />
+<img src="img/iwanttoorder.png" />
 
-23. **Clicking** on **Domino's** r **Gorm's Magstraede** should bring up the respective web pages.  
+1.  **Clicking** on **Domino's** r **Gorm's Magstraede** should bring up the respective web pages.  
 
 
 <a name="step-8---deployment"></a>
