@@ -28,17 +28,20 @@
 1.	Go to this website: https://cai.tools.sap  
 2.	If you get the cookie sign, just click ok to close it.  
 3.	Click on the yellow sign up button. You will get a sign-up form as follows:  
+
 <img src="img/step1-signupform.png" />
+
 4.	Fill up the form as requested
 5.	You will receive a welcome message
 6.	Once you click outside the grey welcome box, you will see your Dashboard:  
+
 <img src="img/step1-dashboard.png" />
 
 <a name="step-2---workshop-exercice"></a>
 
 # Step 2 - Workshop exercice
 
-1.	Copy [cps-image.jpg](/html-skeleton/cxc-image.jpg) and [cps_mocked.html](/html-skeleton/cxc_mocked.html) files.  
+1.	Copy [sappizza.png](/html-skeleton/sappizza.png) and [sappizza.html](/html-skeleton/sappizza.html) files.  
 2.	Select **+ New BOT**  
 <img src="img/step1-newbotbutton.png" />
 3.	We now see this screen:  
@@ -261,10 +264,10 @@
 12. Repeat same process for **token.**  
 13. You should now have: **(Your channelID and token will be different, make sure to         change or you will not be pointing to the bot you worked so hard at!)**  
 
-TODO: ajouter un screenshot du fichier HTML a jour !  
+<img src="img/html.png" />  
 
 1. Make sure to **save**  
 2. Close Notepad and click on **CPS\_Mocked.html.**  
 3. We now have a working bot with a nice front end! Thanks for taking the time to go         through this document!  
 
-TODO: ajouter un screenshot de l'image de fond   
+<img src="html-skeleton/sappizza.png" />
