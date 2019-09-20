@@ -98,25 +98,25 @@
 
 <img src="img/step4-buildingskills.png" />
 
-1. Click on the **fallback** skill.  
-2. Select **Actions** and you should see the below.  
+2. Click on the **fallback** skill.  
+3. Select **Actions** and you should see the below.  
 
 <img src="img/step4-fallback.png" />
 
-1. Click on the **pencil** to edit the message.  
+4. Click on the **pencil** to edit the message.  
 
 <img src="img/step4-pencil.png" />
 
-1. I changed to the following:  
+5. I changed to the following:  
 
 <img src="img/step4-editmsg.png" />
 
-2. Typing in the **&quot;**** are you a bot&quot;**expression now has a friendlier fallback response, let&#39;s move onto getting the bot to respond in a meaningful way!  
+6. Typing in the **&quot;**** are you a bot&quot;**expression now has a friendlier fallback response, let&#39;s move onto getting the bot to respond in a meaningful way!  
 
 <img src="img/step4-replies.png" />
 
-3. Click on **the Build Tab**  
-4. You should see the following:  
+7. Click on **the Build Tab** to go back to the builder 
+8. You should see the following:  
 
 <img src="img/step4-builder.png" />
 
@@ -134,25 +134,25 @@
 
 <img src="img/step5-addcondition.png" />
 
-1. You will see an If logic box **click** n the blank area, and a box will appear.  
-2. Click on @wru and click **Save**  
-3. You should now see the following:  
+5. You will see an If logic box **click** n the blank area, and a box will appear.  
+6. Click on @wru and click **Save**  
+7. You should now see the following:  
 
 <img src="img/step5-or.png" />
 
-1. Click on the **Actions** Tab.  
-2. We want to click on the bottom **ADD NEW MESSAGE GROUP.**  
-3. Click on **ADD Condition.**  
-4. We want to again add **@wru** in the **If logic box** and **SAVE.**  
-5. Click on **SEND MESSAGE.**  
-6. Click on **Text**  
-7. I typed in the following:  
+8. Click on the **Actions** Tab.  
+9. We want to click on the bottom **ADD NEW MESSAGE GROUP.**  
+10. Click on **ADD Condition.**  
+11. We want to again add **@wru** in the **If logic box** and **SAVE.**  
+12. Click on **SEND MESSAGE.**  
+13. Click on **Text**  
+14. I typed in the following:  
 
 <img src="img/step5-addmessage.png" />
 
-1. Make sure to click on SAVE to save the response.  
-2. Clicking on the &quot;+&quot; above this response I can add additional responses that will be chosen at random if desired.  
-3. I now have:  
+15. Make sure to click on SAVE to save the response.  
+16. Clicking on the &quot;+&quot; above this response I can add additional responses that will be chosen at random if desired.  
+17. I now have:  
 
 <img src="img/step5-ifelse.png" />
 
