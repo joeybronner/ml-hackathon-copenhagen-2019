@@ -165,38 +165,37 @@
 
 <img src="img/step6-test.png" />
 
-1. We are now ready to start creating business related skills!  
-2. Let&#39;s create a **pay my bill intent.**  
-3. Click on the **Train tab** on the top.  
-4. Click on **+Create** Intent shown below.  
+3. We are now ready to start creating business related skills!  
+4. Let&#39;s create a **pay my bill intent.**  
+5. Click on the **Train tab** on the top.  
+6. Click on **+Create** Intent shown below.  
 
 <img src="img/step6-createnew.png" />
 
-1. Let&#39;s name this intent **pay my bill intent.**  
-2. **Click** on **pay my bill intent.**  
+7. Let&#39;s name this intent **pay my bill intent.**  
+8. **Click** on **pay my bill intent.**  
 
 <img src="img/step6-paymybill.png" />
 
-1. Add several expressions related to paying bill.  
+9. Add several expressions related to paying bill.  
 
 <img src="img/step6-addexpressions.png" />
 
-1. Let&#39;s now create a **pay bill**** Skill.**   
-2. **Click** on **Build Tab.**  
-3. Click on **+ Create Skill.**  
-4. Name **pay bill.**  
-5. We will make this **Business Skill Type.**  
-6. **Click** on **CREATE SKILL.**  
-7.
+10. Let&#39;s now create a **pay bill**** Skill.**   
+11. **Click** on **Build Tab.**  
+12. Click on **+ Create Skill.**  
+13. Name **pay bill.**  
+14. We will make this **Business Skill Type.**  
+15. **Click** on **CREATE SKILL.**  
 16.I know have the following: _(You can use the_ ![](data:image/*;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAFWwZ+/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA2UExURf////Dw8N3d3fb29u3t7bq6uqGhocDAwJ6envT09Ofn59nZ2bKystra2unp6cjIyPLy8gAAAPfq0UcAAAASdFJOU///////////////////////AOK/vxIAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABdSURBVBhXnY7NCsAwCIODRPBQ8P3fdrU/upXtsu9gQ41RDLQecupAomgbXYuSqK0RKBu3ngMnFUjbKVQRnw16yjCk+3bHN6xDEkKaPE7pro2vrwHh3Xkuesv8BXABPccBqp6Rhk4AAAAASUVORK5CYII=)_located in the top right of each skill to rearrange skills to your liking.)_
 
 <img src="img/step6-builder.png" />
 
-1. **Click** on **pay-bill.**  
-2. **Click** on **Triggers tab.**  
-3. You will see an If logic box, **click** on the blank area, and a box will appear.  
-4. Click on @pay-my-bill-intent and click **Save.**  
-5. You should now see the following:  
+17. **Click** on **pay-bill.**  
+18. **Click** on **Triggers tab.**  
+19. You will see an If logic box, **click** on the blank area, and a box will appear.  
+20. Click on @pay-my-bill-intent and click **Save.**  
+21. You should now see the following:  
 
 <img src="img/step6-ifpaymybillthen.png" />
 
@@ -228,44 +227,12 @@
 
 <img src="img/step7-formresponse.png" />
 
-1. Let&#39;s test our changes- click on **CHAT WITH YOUR BOT.**  
+22. Let&#39;s test our changes- click on **CHAT WITH YOUR BOT.**  
 
 <img src="img/step7-forminchat.png" />
 
-1. **Clicking** n **Login** r **Register Account** should bring up the respective web page.  
-2. Let&#39;s create a **report down intent.**  
-3. Click on the **Train tab** n the top.  
-4. Click on **+Create** Intent shown below.  
+23. **Clicking** n **Login** r **Register Account** should bring up the respective web page.  
 
-<img src="img/step7-report-down.png" />
-
-1. Let&#39;s name this intent **report down line intent.**  
-2. **Click report-down-line-intent.**  
-
-<img src="img/step7-edit-intent.png" />
-
-1. Add several expressions related to reporting a downed line. I now have the following: (when creating intents, the platform will suggest expressions that can enrich your content. You can click and add these at any point.)  
-
-<img src="img/step7-suggestionsintent.png" />
-
-1. Let&#39;s now create a **downed line skill.**  
-2. **Click** n **Build Tab.**  
-3. Click on **+ Create Skill.**  
-4. Name **downed line** _skill._  
-5. We will make this **Business Skill Type.**  
-6. **Click** n **CREATE SKILL.**  
-7.
-36.I now have the following: _(You can use the_ ![](data:image/*;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAFWwZ+/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAA2UExURf////Dw8N3d3fb29u3t7bq6uqGhocDAwJ6envT09Ofn59nZ2bKystra2unp6cjIyPLy8gAAAPfq0UcAAAASdFJOU///////////////////////AOK/vxIAAAAJcEhZcwAAHYcAAB2HAY/l8WUAAABdSURBVBhXnY7NCsAwCIODRPBQ8P3fdrU/upXtsu9gQ41RDLQecupAomgbXYuSqK0RKBu3ngMnFUjbKVQRnw16yjCk+3bHN6xDEkKaPE7pro2vrwHh3Xkuesv8BXABPccBqp6Rhk4AAAAASUVORK5CYII=)_located in the top right of each skill to rearrange skills to your liking.)_
-
-<img src="img/step7-grid.png" />
-
-1. **Click** n **downed-line.**  
-2. **Click** n **Triggers tab.**  
-3. You will see an If logic box, **click** on the blank area, and a box will appear.  
-4. Click on **@report-down-line-intent** and click **Save.**  
-5. You should now see the following:  
-
-<img src="img/step7-saveintent.png" />
 
 <a name="step-8---deployment"></a>
 
@@ -275,24 +242,24 @@
 
 <img src="img/step8-deployment.png" />
 
-1. **Click** on **Webchat.**  
-2. **The following box will display:**  
+2. **Click** on **Webchat.**  
+3. **The following box will display:**  
 
 <img src="img/step8-webchat.png" />
 
-1. **Click on Color Scheme.**  
-2. I want to match colors like CPS site- Change **Accent Color** to Blue.  
-3. Under **Header customization** , change **Header title** to CPS Chatbot.  
-4. Under **Message Settings** add a **Welcome Message** - &quot;Hello, welcome to the CPS Energy website! Please let me know how I can assist you.&quot;  
-5. Click on **CREATE**.  
-6. Open the CPS\_Mocked.html copied in Step 1 with an HTML Editor. (Notepad works fine.)  
-7. Copy the **channelID** found under **Webchat Script.**  
+4. **Click on Color Scheme.**  
+5. I want to match colors like CPS site- Change **Accent Color** to Blue.  
+6. Under **Header customization** , change **Header title** to CPS Chatbot.  
+7. Under **Message Settings** add a **Welcome Message** - &quot;Hello, welcome to the CPS Energy website! Please let me know how I can assist you.&quot;  
+8. Click on **CREATE**.  
+9. Open the CPS\_Mocked.html copied in Step 1 with an HTML Editor. (Notepad works fine.)  
+10. Copy the **channelID** found under **Webchat Script.**  
 
 <img src="img/step8-channelid.png" />
 
-1. **Paste channelID** into the CPS\_Mocked.html file replacing **&quot;ENTER Channel ID Here&quot;.**  
-2. Repeat same process for **token.**  
-3. You should now have: **(Your channelID and token will be different, make sure to         change or you will not be pointing to the bot you worked so hard at!)**  
+11. **Paste channelID** into the CPS\_Mocked.html file replacing **&quot;ENTER Channel ID Here&quot;.**  
+12. Repeat same process for **token.**  
+13. You should now have: **(Your channelID and token will be different, make sure to         change or you will not be pointing to the bot you worked so hard at!)**  
 
 TODO: ajouter un screenshot du fichier HTML a jour !  
 
