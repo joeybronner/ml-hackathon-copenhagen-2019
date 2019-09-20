@@ -109,15 +109,15 @@
 
 1. Click on the **pencil** to edit the message.  
 
-<img src="img/step4-pencil.png" />
+<img src="img/penciledit.png" />
 
 5. I changed to the following:  
 
-<img src="img/step4-editmsg.png" />
+<img src="img/custommsg.png" />
 
-6. Typing in the **"are you a bot"** expression now has a friendlier fallback response, let's move onto getting the bot to respond in a meaningful way!  
-7. Click on **the Build Tab** to go back to the builder 
-8. You should see the following:  
+1. Typing in the **"are you a bot"** expression now has a friendlier fallback response, let's move onto getting the bot to respond in a meaningful way!  
+2. Click on **the Build Tab** to go back to the builder 
+3. You should see the following:  
 
 <img src="img/buildergreetings.png" />
 
