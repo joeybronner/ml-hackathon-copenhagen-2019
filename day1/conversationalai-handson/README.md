@@ -100,14 +100,14 @@
 
 1. Click on the **Build tab** shown here:  
 
-<img src="img/step4-buildingskills.png" />
+<img src="img/buildtab.png" />
 
-2. Click on the **Fallback** skill.  
-3. Select **Actions** and you should see the below.  
+1. Click on the **Fallback** skill.  
+2. Select **Actions** and you should see the below.  
 
-<img src="img/step4-fallback.png" />
+<img src="img/fallback.png" />
 
-4. Click on the **pencil** to edit the message.  
+1. Click on the **pencil** to edit the message.  
 
 <img src="img/step4-pencil.png" />
 
@@ -116,13 +116,10 @@
 <img src="img/step4-editmsg.png" />
 
 6. Typing in the **"are you a bot"** expression now has a friendlier fallback response, let's move onto getting the bot to respond in a meaningful way!  
-
-<img src="img/step4-replies.png" />
-
 7. Click on **the Build Tab** to go back to the builder 
 8. You should see the following:  
 
-<img src="img/step4-builder.png" />
+<img src="img/buildergreetings.png" />
 
 <a name="step-5---configuring-a-skill"></a>
 
