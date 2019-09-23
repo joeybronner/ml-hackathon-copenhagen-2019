@@ -1,0 +1,141 @@
+<core:View xmlns:core="sap.ui.core"
+		   xmlns="sap.uxap"
+		   xmlns:m="sap.m"
+		   xmlns:f="sap.f"
+		   xmlns:l="sap.ui.layout"
+			 xmlns:semantic="sap.m.semantic"
+		   controllerName="sap.mlf.retraining.controller.Job"
+		   height="100%">
+	 <semantic:FullscreenPage
+	 	id="page"
+	 	navButtonPress="onNavBack"
+	 	showNavButton="true"
+	 	title="{i18n>job}"
+		showFooter="false">
+	 	<semantic:content>
+
+			<ObjectPageLayout id="ObjectPageLayout"
+							  showTitleInHeaderContent="true"
+							  alwaysShowContentHeader="true"
+							  preserveHeaderStateOnScroll="false"
+							  headerContentPinnable="true"
+							  isChildPage="true"
+							  enableLazyLoading="false"
+								showAnchorBar="false">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<breadcrumbs>
+							<m:Breadcrumbs>
+								<m:Link text='{i18n>jobsTitle}' press="onBreadcrumbsPress"/>
+							</m:Breadcrumbs>
+						</breadcrumbs>
+
+						<expandedHeading>
+							<m:Title text="{job>/id}" wrapping="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
+						</expandedHeading>
+
+						<snappedHeading>
+							<m:Title text="{job>/id}" wrapping="true" class="sapUiTinyMarginEnd"/>
+						</snappedHeading>
+
+						<expandedContent>
+							<m:Text text="{
+			                  path: 'job>/submissionTime',
+			                  type: 'sap.ui.model.type.DateTime',
+			    				      formatOptions: {
+			                      source: {
+			                          pattern: 'yyyy-MM-ddTHH:mm:ss.AAX'
+			                      },
+			                      relative: true,
+			                      relativeScale: 'auto'
+			        					}
+								}"/>
+						</expandedContent>
+
+						<snappedContent>
+							<m:Text text="{
+			                  path: 'job>/submissionTime',
+			                  type: 'sap.ui.model.type.DateTime',
+			    				      formatOptions: {
+			                      source: {
+			                          pattern: 'yyyy-MM-ddTHH:mm:ss.AAX'
+			                      },
+			                      relative: true,
+			                      relativeScale: 'auto'
+			        					}
+								}"/>
+						</snappedContent>
+
+						<actions>
+							<m:OverflowToolbarToggleButton id="autoRefresh" press="onPressAutoRefresh"
+								enabled="{path: 'view>/isEnabledAutoRefresh'}" pressed="{path: 'view>/isPressedAutoRefresh'}"
+								type="Transparent" icon="sap-icon://restart" text="{i18n>autoRefresh}"/>
+						</actions>
+
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+
+				<headerContent>
+					<l:HorizontalLayout
+									allowWrapping="true">
+
+									<l:VerticalLayout class="sapUiLargeMarginEnd">
+										<m:ObjectAttribute title="{i18n>status}"/>
+										<m:ObjectStatus text="{job>/status}" state="{path: 'job>/status',
+											formatter: '.formatter.formatState'}"/>
+									</l:VerticalLayout>
+
+									<l:VerticalLayout visible="{path: 'log>/modelName', formatter: '.isVisibleModel'}" class="sapUiLargeMarginEnd">
+										<m:ObjectAttribute title="{i18n>model}"/>
+										<m:Link text="{log>/modelName}" press="onNavToModel"/>
+									</l:VerticalLayout>
+
+									<l:VerticalLayout visible="{path: 'job>/startTime', formatter: '.isVisibleStartTime'}"
+											class="sapUiLargeMarginEnd">
+										<m:ObjectAttribute title="{i18n>startTime}" text="{
+					                  path: 'job>/startTime',
+					                  type: 'sap.ui.model.type.DateTime',
+					    				      formatOptions: {
+					                      source: {
+					                          pattern: 'yyyy-MM-ddTHH:mm:ss.AAX'
+					                      },
+					                      relative: false,
+					                      relativeScale: 'auto'
+					        					}
+					          }"/>
+										<m:ObjectAttribute title="{i18n>finishTime}" text="{
+					                  path: 'job>/finishTime',
+					                  type: 'sap.ui.model.type.DateTime',
+					    				      formatOptions: {
+					                      source: {
+					                          pattern: 'yyyy-MM-ddTHH:mm:ss.AAX'
+					                      },
+					                      relative: false,
+					                      relativeScale: 'auto'
+					        					}
+										}"/>
+									</l:VerticalLayout>
+
+							</l:HorizontalLayout>
+				</headerContent>
+
+				<sections>
+					<ObjectPageSection showTitle="false" size="20">
+						<subSections>
+							<ObjectPageSubSection>
+								<blocks>
+									<m:VBox class="sapUiMediumMarginTop" visible="{path: 'log>/text', formatter: '.isVisibleAvatar'}" alignItems="Center">
+										<f:Avatar src="sap-icon://document-text" displaySize="XL" displayShape="Circle"/>
+										<m:Text class="sapUiMediumMarginTop" text="{i18n>noLogsAvailable}"/>
+									</m:VBox>
+									<m:Text visible="{path: 'log>/text', formatter: '.isVisibleLogText'}" text="{log>/text}"/>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+
+			</ObjectPageLayout>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</core:View>

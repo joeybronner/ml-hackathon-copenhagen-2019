@@ -1,0 +1,44 @@
+<mvc:View controllerName="D064906.Sentimental-UI.controller.main" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m" xmlns:f="sap.ui.layout.form"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<pages>
+			<Page title="Sentimental Classification">
+				<content>
+					<form:SimpleForm class="text_descriptor_wrapper">
+						<Text text="Text to analyze:" class="text_descriptor"></Text>	
+					</form:SimpleForm>
+					<form:SimpleForm editable="true" class="input-text">
+						<TextArea value="" rows="14" width="800px" id="text_scan" />
+					</form:SimpleForm>
+					<Text text="Note: The inference app will automatically choose the deployed model, that has the highest version number!" class="latestVersion"/>
+					<Button text="Analyze!" press="handleContinue" class="sendRequestBtn">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Button>
+					<BusyIndicator class="sapUiSmallMarginBottom loader" />
+					<Title level="H3" text="Error!" class="errorTitle" />
+					<Text text="An Error occured while trying to generate token! Please double check your inputs. If this error keeps occuring please check back with a trainer." class="errorTxt"/>
+					<Title level="H3" text="Result" class="resultTitle" />
+					<core:Icon
+						src="sap-icon://thumb-up"
+						class="thumbsUp rating"
+						color="#031E48" >
+						<core:layoutData>
+							<FlexItemData growFactor="5" />
+						</core:layoutData>
+					</core:Icon>
+					<core:Icon
+						src="sap-icon://thumb-down"
+						class="thumbsDown rating"
+						color="#031E48" >
+						<core:layoutData>
+							<FlexItemData growFactor="5" />
+						</core:layoutData>
+					</core:Icon>
+					<Text text="error" class="probability"></Text>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

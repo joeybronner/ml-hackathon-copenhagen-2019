@@ -1,0 +1,14 @@
+<mvc:View controllerName="sap.mlf.retraining.controller.Main" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns="sap.m">
+	<App id="main">
+		<Page showHeader="true" title="{i18n>appTitle}">
+	        <content>
+	        	<TileContainer id="container">
+							<StandardTile icon="sap-icon://browse-folder" title="{i18n>manageTrainingData}" info="" press="onNavToTrainingData"></StandardTile>
+							<StandardTile icon="sap-icon://time-account" title="{i18n>manageJobsTitle}" info="" press="onNavToJobs"></StandardTile>
+	        		<StandardTile icon="sap-icon://customize" title="{i18n>manageModelsTitle}" info="" press="onNavToModels"></StandardTile>
+	        	</TileContainer>
+	        </content>
+	    </Page>
+	</App>
+</mvc:View>

@@ -1,0 +1,212 @@
+<core:View xmlns:core="sap.ui.core"
+		   xmlns="sap.uxap"
+		   xmlns:m="sap.m"
+		   xmlns:f="sap.f"
+		   xmlns:l="sap.ui.layout"
+		   xmlns:semantic="sap.m.semantic"
+		   xmlns:u="sap.ui.unified"
+		   xmlns:micro="sap.suite.ui.microchart"
+		   controllerName="sap.mlf.retraining.controller.Model"
+		   height="100%">
+	<semantic:FullscreenPage
+			id="page"
+			navButtonPress="onNavBack"
+			showNavButton="true"
+			title="{i18n>model}"
+			showFooter="false">
+		<semantic:content>
+			<ObjectPageLayout id="ObjectPageLayout"
+							  showTitleInHeaderContent="true"
+							  alwaysShowContentHeader="true"
+							  preserveHeaderStateOnScroll="false"
+							  headerContentPinnable="true"
+							  isChildPage="true"
+							  enableLazyLoading="false"
+							  showAnchorBar="false">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<breadcrumbs>
+							<m:Breadcrumbs>
+								<m:Link text='{i18n>modelTitle}' press="onBreadcrumbsPress"/>
+							</m:Breadcrumbs>
+						</breadcrumbs>
+
+						<expandedHeading>
+							<m:Title text="{model>/modelName}" wrapping="true" class="sapUiTinyMarginEnd sapUiTinyMarginTop"/>
+						</expandedHeading>
+
+						<snappedHeading>
+							<m:Title text="{model>/modelName}" wrapping="true" class="sapUiTinyMarginEnd"/>
+						</snappedHeading>
+
+						<expandedContent>
+							<m:Text text="{
+								 path: 'model>/modelVersion'
+								}"/>
+						</expandedContent>
+
+						<snappedContent>
+							<m:Text text="{
+			                  path: 'model>/modelVersion'
+								}"/>
+						</snappedContent>
+
+						<actions>
+							<ObjectPageHeaderActionButton press="onPressModelDeploy"
+									  text="{i18n>deploy}" hideText="false" hideIcon="true" type="Emphasized"
+									  enabled="{path: 'model>/status/state', formatter: '.formatter.isDeployable'}"/>
+							<ObjectPageHeaderActionButton press="onPressModelUnDeploy"
+									  text="{i18n>undeploy}" hideText="false" hideIcon="true" type="Transparent"
+									  enabled="{path: 'model>/status/state', formatter: '.formatter.isUndeployable'}"/>
+							<m:OverflowToolbarToggleButton press="onPressAutoRefresh" enabled="{path: 'model>/status/state', formatter: '.formatter.isEnabledAutoRefresh'}" type="Transparent" icon="sap-icon://restart" text="{i18n>autoRefresh}"/>
+						</actions>
+
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+
+				<headerContent>
+					<l:HorizontalLayout
+							allowWrapping="true">
+
+						<l:VerticalLayout visible="{= ${model>/createdAt} !== ''}"
+										  class="sapUiLargeMarginEnd">
+							<m:ObjectAttribute title="{i18n>uploadTime}" text="{
+								path: 'model>/createdAt',
+								formatter: '.formatter.dateTime'
+								}"/>
+							<m:ObjectAttribute title="{i18n>updateTime}" text="{
+								path: 'model>/updatedAt',
+								formatter: '.formatter.dateTime'
+								}"/>
+						</l:VerticalLayout>
+
+						<l:VerticalLayout visible="{= ${model>/status/state} !== ''}" class="sapUiLargeMarginEnd">
+							<m:ObjectAttribute title="{i18n>deploymentStatus}"/>
+							<m:ObjectStatus text="{model>/status/state}" state="{path: 'model>/status/state',
+								formatter: '.formatter.formatState'}"/>
+						</l:VerticalLayout>
+
+						<l:VerticalLayout visible="{= ${model>/status/description} !== ''}"
+										  class="sapUiLargeMarginEnd">
+							<m:ObjectAttribute title="Deployment Log"/>
+							<m:Text width="300px" text="{model>/status/description}"/>
+						</l:VerticalLayout>
+
+					</l:HorizontalLayout>
+				</headerContent>
+
+				<sections>
+
+					<ObjectPageSection id="inferenceSS1" title="inference" showTitle="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<blocks>
+									<m:VBox class="sapUiMediumMarginTop" visible="{= ${model>/status/state} !== 'SUCCEEDED'}" alignItems="Center">
+										<f:Avatar src="sap-icon://upload-to-cloud" displaySize="XL" displayShape="Circle"/>
+										<m:Text class="sapUiMediumMarginTop" text="{i18n>hintDeployModel}"/>
+									</m:VBox>
+
+									<m:VBox visible="{= ${model>/status/state} === 'SUCCEEDED'}">
+
+										<m:OverflowToolbar>
+											<u:FileUploader id="fileUploader" name="file"
+													tooltip="{i18n>uploadImageTooltip}" class="sapUiSmallMargin"
+													buttonOnly="true" change="onChangeImageUpload"
+													buttonText="{i18n>uploadImage}" multiple="false"/>
+											<m:Button text="{i18n>inferenceButton}" class="sapUiSmallMargin"
+													press="onPressClassify"/>
+											<m:CheckBox id="genericInference" text="{i18n>inferenceGenericModel}" selected="false" />																
+										</m:OverflowToolbar>
+
+										<m:Image src="{/image}" densityAware="false"
+												 height="200px" class="sapUiSmallMargin"/>
+												 
+										<l:HorizontalLayout class="sapUiContentPadding" >
+
+											<m:Table id="idPredictionsTable"
+													 width="600px"
+													 visible="{path: '/predictions', formatter: '.formatter.hasPredictions'}"
+													 inset="false"
+													 items="{
+														path: '/predictions',
+														sorter: {
+															path: 'name'
+														}
+													}">
+												<m:headerToolbar>
+													<m:Toolbar>
+														<m:content>
+															<m:Title text="{parts: [{path: 'i18n>predictions'}, {path: 'model>/modelName'}]}" level="H2"/>
+														</m:content>
+													</m:Toolbar>
+												</m:headerToolbar>
+												<m:columns>
+													<m:Column hAlign="Left">
+														<m:Text text="Label"/>
+													</m:Column>
+													<m:Column hAlign="Left" demandPopin="true" minScreenWidth="Tablet">
+														<m:Text text="Results" />
+													</m:Column>
+												</m:columns>
+												<m:items>
+													<m:ColumnListItem>
+														<m:cells>
+															<m:ObjectIdentifier
+																	title="{label}"
+															/>
+															<micro:RadialMicroChart percentage="{=Math.round(${score}*100)}" size="M"/>
+														</m:cells>
+													</m:ColumnListItem>
+												</m:items>
+											</m:Table>
+
+											<m:Table id="idGenericPredictionsTable"
+													 width="600px"
+													 visible="{path: '/predictionsGeneric', formatter: '.formatter.hasPredictions'}"
+													 inset="false"
+													 items="{
+ 														path: '/predictionsGeneric',
+ 														sorter: {
+ 															path: 'name'
+ 														}
+ 													}">
+												<m:headerToolbar>
+													<m:Toolbar>
+														<m:content>
+															<m:Title text="{i18n>predictionsGenericModel}" level="H2"/>
+														</m:content>
+													</m:Toolbar>
+												</m:headerToolbar>
+												<m:columns>
+													<m:Column hAlign="Left">
+														<m:Text text="Label"/>
+													</m:Column>
+													<m:Column hAlign="Left" demandPopin="true" minScreenWidth="Tablet">
+														<m:Text text="Results" />
+													</m:Column>
+												</m:columns>
+												<m:items>
+													<m:ColumnListItem>
+														<m:cells>
+															<m:ObjectIdentifier
+																	title="{label}"
+															/>
+															<micro:RadialMicroChart percentage="{=Math.round(${score}*100)}" size="M"/>
+														</m:cells>
+													</m:ColumnListItem>
+												</m:items>
+											</m:Table>
+										
+										</l:HorizontalLayout>
+										
+									</m:VBox>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+
+			</ObjectPageLayout>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</core:View>

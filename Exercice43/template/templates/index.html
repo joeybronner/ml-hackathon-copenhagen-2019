@@ -1,0 +1,34 @@
+<!--
+	Created by D064906
+	For Workshop use only
+-->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+		<title>Sentimental-UI</title>
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-theme="sap_belize"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-resourceroots='{"D064906.Sentimental-UI": "./"}'>
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "D064906.Sentimental-UI"
+					})
+				}).placeAt("content");
+			});
+		</script>
+	</head>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+	<body class="sapUiBody" id="content">
+	</body>
+</html>

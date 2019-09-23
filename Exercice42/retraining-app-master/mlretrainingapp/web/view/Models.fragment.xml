@@ -1,0 +1,97 @@
+<core:FragmentDefinition
+  xmlns:m="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:layout="sap.ui.layout">
+
+  <m:Table id="idRetrainedModelsTable"
+			inset="false"
+			items="{
+				path: '/',
+        sorter: [{
+          path: 'modelName'
+        },{
+          path: 'createdAt'
+        }]
+			}"
+			enableBusyIndicator="true"
+		>
+		<m:headerToolbar>
+			<m:OverflowToolbar>
+					<m:ToolbarSpacer/>
+          <m:SearchField width="15rem" search="onSearch"/>
+					<m:Button icon="sap-icon://synchronize" press="onPressModelRefresh" >
+					<!--<m:layoutData>
+						<m:OverflowToolbarLayoutData priority="NeverOverflow" />
+					</m:layoutData>-->
+				</m:Button>
+			</m:OverflowToolbar>
+		</m:headerToolbar>
+		<m:columns>
+			<m:Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				vAlign="Middle"
+				hAlign="Left">
+				<m:Text text="{i18n>model}"/>
+			</m:Column>
+			<m:Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				vAlign="Middle"
+				hAlign="Right">
+				<m:Text text="{i18n>version}"/>
+			</m:Column>
+      <m:Column
+        minScreenWidth="Tablet"
+        demandPopin="true"
+        vAlign="Middle"
+        hAlign="Left">
+        <m:Text text="{i18n>deploymentStatus}"/>
+      </m:Column>
+			<m:Column
+				minScreenWidth="Tablet"
+				demandPopin="true"
+				vAlign="Middle"
+				hAlign="Right">
+				<m:Text text="{i18n>uploadDate}"/>
+			</m:Column>
+			<m:Column
+				hAlign="Right">
+			</m:Column>
+		</m:columns>
+		<m:items>
+			<m:ColumnListItem
+				press="onPressModel"
+      	type="Navigation"
+        highlight="{path: 'status/state', formatter: '.formatter.formatModelHighlight'}">
+				<m:cells>
+          <m:ObjectIdentifier
+            title="{modelName}"
+            text="{
+                    path: 'createdAt',
+                    type: 'sap.ui.model.type.DateTime',
+      				      formatOptions: {
+                        source: {
+                            pattern: 'yyyy-MM-dd\'T\'HH:mm:ss.SSSZ'
+                        },
+                        relative: true,
+                        relativeScale: 'auto'
+          					}
+                }"/>
+					<m:Text
+						text="{modelVersion}"/>
+          <m:ObjectStatus
+            text="{status/state}"
+            state="{path: 'status/state', formatter: '.formatter.formatModelState'}"/>
+					<m:Text
+						text="{path: 'createdAt', formatter: '.formatter.dateTime'}"/>
+					<m:Button press="onPressModelDeploy" class="sapUiSmallMarginEnd"
+							text="{i18n>deploy}" type="Emphasized"
+							enabled="{path: 'status/state', formatter: '.formatter.isDeployable'}"/>
+				</m:cells>
+			</m:ColumnListItem>
+		</m:items>
+	</m:Table>
+
+</core:FragmentDefinition>

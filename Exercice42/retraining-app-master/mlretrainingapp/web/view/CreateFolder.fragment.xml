@@ -1,0 +1,31 @@
+<core:FragmentDefinition
+  xmlns:m="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:layout="sap.ui.layout">
+
+    <m:Dialog
+      id="folderDialog"
+      title="{i18n>folderDialogTitle}">
+
+  		<f:SimpleForm id="SimpleFormParameters" editable="true" layout="ResponsiveGridLayout" singleContainerFullSize="false">
+  			<f:content>
+
+	  		<m:Label text="{i18n>folderName}" labelFor="inputFolderName"/>
+	    	<m:Input id="inputFolderName" required="true"
+	      		value="{path: 'view>/newFolder', type: 'sap.ui.model.type.String', constraints: {minLength: 1, maxLength: 40} }"
+	      		maxLength="40">
+	    	</m:Input>
+
+  		</f:content>
+  	</f:SimpleForm>
+
+	<m:beginButton>
+      <m:Button text="{i18n>create}" type="Emphasized" press="onPressCreateCreateFolder"/>
+    </m:beginButton>
+    <m:endButton>
+      <m:Button text="{i18n>cancel}" press="onPressCancelCreateFolder"/>
+  	</m:endButton>
+
+    </m:Dialog>
+</core:FragmentDefinition>

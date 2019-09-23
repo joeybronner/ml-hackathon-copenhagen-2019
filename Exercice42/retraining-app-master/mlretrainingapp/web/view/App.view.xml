@@ -1,0 +1,133 @@
+<core:View
+   controllerName="sap.mlf.retraining.controller.App"
+   		 xmlns:core="sap.ui.core"
+		   xmlns="sap.uxap"
+		   xmlns:f="sap.ui.layout.form"
+		   xmlns:u="sap.ui.unified"
+		   xmlns:layout="sap.ui.layout"
+		   xmlns:m="sap.m"
+		   xmlns:micro="sap.suite.ui.microchart">
+    <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" useIconTabBar="true" showTitleInHeaderContent="true">
+    <headerTitle>
+			<ObjectPageHeader
+							  objectTitle="{i18n>objTitle}"
+							  objectSubtitle="{i18n>objSubtitle}"
+							  objectImageURI="../images/icon.svg"
+							  objectImageShape="Circle"
+							  isObjectIconAlwaysVisible="false"
+							  isObjectTitleAlwaysVisible="false"
+							  isObjectSubtitleAlwaysVisible="false"
+							  isActionAreaAlwaysVisible="true"
+							  showPlaceholder="true">
+				<actions>
+					<ObjectPageHeaderActionButton text="{i18n>retrainBaseModel}" type="Emphasized" hideText="false" press="onRetrainPress"/>
+				</actions>
+			</ObjectPageHeader>
+		</headerTitle>
+
+		<headerContent>
+				<layout:VerticalLayout>
+					<m:Link text="{i18n>goToHelp}" target="_blank" href="https://help.sap.com/viewer/a86b12f81f424c45a0e7c83c1d5025c4/1.0/en-US"/>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout>
+					<layout:layoutData>
+						<ObjectPageHeaderLayoutData showSeparatorAfter="false"/>
+					</layout:layoutData>
+          <m:Title level="H3" text="{i18n>jobTitle}"/>
+          <m:Label  text="{i18n>jobSubtitle}"/>
+					<m:ObjectNumber number="{=${/retrainingjobs}.length}" emphasized="true"></m:ObjectNumber>
+				</layout:VerticalLayout>
+				<layout:VerticalLayout>
+					<layout:layoutData>
+						<ObjectPageHeaderLayoutData showSeparatorAfter="false"/>
+					</layout:layoutData>
+          <m:Title level="H2" text="{i18n>modelTitle}"/>
+          <m:Label text="{i18n>modelSubtitle}"/>
+					<m:ObjectNumber number="{=${/retrainedModels}.length}" emphasized="true"></m:ObjectNumber>
+				</layout:VerticalLayout>
+				<layout:VerticalLayout>
+					<layout:layoutData>
+						<ObjectPageHeaderLayoutData showSeparatorAfter="false"/>
+					</layout:layoutData>
+          <m:Title level="H4" text="{i18n>deployedModelTitle}"/>
+					<m:Label  text="{i18n>deployedModelSubtitle}"/>
+					<m:ObjectNumber number="{/numberDeployments}" emphasized="true"></m:ObjectNumber>
+				</layout:VerticalLayout>
+
+		</headerContent>
+		<sections>
+			<ObjectPageSection id="models" title="{i18n>retrainedModels}">
+				<subSections>
+					<ObjectPageSubSection id="modelsSS1" title="{i18n>retrainedModels}">
+            <core:Fragment fragmentName="sap.mlf.retraining.view.Models" type="XML"></core:Fragment>
+				</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection id="inference" title="inference">
+				<subSections>
+					<ObjectPageSubSection id="inferenceSS1" title="inference">
+					<m:VBox>
+						<m:Image src="{/image}" densityAware="false" height="200px" class="sapUiSmallMargin"></m:Image>
+						<u:FileUploader id="fileUploader" name="file" tooltip="Upload any image" class="sapUiSmallMargin"
+							buttonOnly="true" change="onChangeImageUpload"  buttonText="Upload an Image" multiple="false"/>
+								<m:Label text="Model Name" labelFor="input-inference-model" class="sapUiSmallMargin"/>
+								<m:Input id="input-inference-model" required="true"
+									value="{ path : '/inference-model', type : 'sap.ui.model.type.String', constraints : { minLength: 1, maxLength: 40 } }"
+									placeholder="Enter Model Name..."/>
+								<m:Label text="Model Version" labelFor="input-inference-version" class="sapUiSmallMargin"/>
+								<m:Input id="input-inference-version" required="true"
+									value="{ path : '/inference-version', type : 'sap.ui.model.type.String', constraints : { minLength: 1, maxLength: 40 } }"
+									placeholder="Enter Version Number..."></m:Input>
+						<m:Button text="Classify your Image" class="sapUiSmallMargin" press="onPressClassify">
+						</m:Button>
+
+						<m:Table id="idPredictionsTable"
+								inset="false"
+								items="{
+									path: '/predictions',
+									sorter: {
+										path: 'name'
+									}
+								}">
+							<m:headerToolbar>
+								<m:Toolbar>
+									<m:content>
+										<m:Title text="Predictions" level="H2"/>
+									</m:content>
+								</m:Toolbar>
+							</m:headerToolbar>
+							<m:columns>
+								<m:Column hAlign="Left">
+									<m:Text text="Label"/>
+								</m:Column>
+								<m:Column hAlign="Left" demandPopin="true" minScreenWidth="Tablet">
+									<m:Text text="Results" />
+								</m:Column>
+							</m:columns>
+							<m:items>
+								<m:ColumnListItem>
+									<m:cells>
+										<m:ObjectIdentifier
+											title="{label}"
+											/>
+										<micro:RadialMicroChart percentage="{=Math.round(${score}*100)}" size="M"/>
+									</m:cells>
+								</m:ColumnListItem>
+							</m:items>
+						</m:Table>
+					</m:VBox>
+					</ObjectPageSubSection>
+
+				</subSections>
+			</ObjectPageSection>
+      <ObjectPageSection id="data" title="{i18n>trainingData}">
+  			<subSections>
+  				<ObjectPageSubSection id="dataSS1" title="{i18n>trainingData}">
+            <core:Fragment fragmentName="sap.mlf.retraining.view.Data" type="XML"></core:Fragment>
+  				</ObjectPageSubSection>
+  			</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</core:View>

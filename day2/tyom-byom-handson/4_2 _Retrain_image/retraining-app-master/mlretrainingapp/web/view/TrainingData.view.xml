@@ -1,0 +1,17 @@
+<mvc:View
+	controllerName="sap.mlf.retraining.controller.TrainingData"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.m.semantic"
+	xmlns="sap.m">
+	<semantic:FullscreenPage
+		id="page"
+		navButtonPress="onNavBack"
+		showNavButton="true"
+		title="{i18n>manageTrainingData}"
+		showFooter="false">
+		<semantic:content>
+			<core:Fragment fragmentName="sap.mlf.retraining.view.Data" type="XML"></core:Fragment>
+		</semantic:content>
+	</semantic:FullscreenPage>
+</mvc:View>
