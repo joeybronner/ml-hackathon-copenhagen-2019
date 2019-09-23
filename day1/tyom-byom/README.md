@@ -1,10 +1,4 @@
-# BYOM 
-
-Presentation of steps for Machinbe Learning model creation
-BYOM Bring Your Own Model to SAP Cloud Platform
-
-
-
+# BYOM
 ```
 BYOM/
 ├── index.html
@@ -15,6 +9,7 @@ BYOM/
 ├── js/
 │   ├── webslides.js
 │   └── svg-icons.js (optional)
-└── Demos/
+└── demos/
 └── images/
 ```
+
