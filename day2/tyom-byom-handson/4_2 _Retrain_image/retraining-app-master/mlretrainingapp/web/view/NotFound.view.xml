@@ -1,7 +1,0 @@
-<mvc:View controllerName="sap.mlf.retraining.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<MessagePage title="{i18n>notFoundTitle}" text="{i18n>notFoundText}" icon="{sap-icon://document}">
-		<customDescription>
-			<Link id="link" text="{i18n>backToRetrainingApp}" press="onLinkPressed"/>
-		</customDescription>
-	</MessagePage>
-</mvc:View>
