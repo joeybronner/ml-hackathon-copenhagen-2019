@@ -1,0 +1,86 @@
+.sendRequestBtn {
+	margin-top: 15px;
+	margin-left: calc(50% - 40px)
+}
+
+.resultTitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+
+.errorTitle {
+	display: block;
+    margin-top: 25px;
+    margin-left: 60px;
+    display: none;
+	color: #C0392B;
+}
+
+.errorTxt {
+	text-align: justify;
+    display: block;
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: none;
+}
+
+.loader {
+	font-size: 1.4rem;
+    display: block;
+    margin-top: 150px;
+    display: none;
+}
+
+.latestVersion {
+    width: 100%;
+    text-align: center !important;
+    font-size: 10px;
+    color: #888;
+    display: block;
+    margin-top: -6px;
+}
+
+.rating {
+	font-size: 70px;
+    text-align: center;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.probability {
+    display: none;
+    width: 100%;
+    text-align: center !important;
+    margin-top: 25px;
+}
+
+.thumbsUp {
+	display: none;
+}
+
+
+.thumbsDown {
+	display: none;
+}
+
+.text_descriptor_wrapper {
+	width: 100%;
+    text-align: center;
+}
+
+.text_descriptor {
+    width: 800px !important;
+    margin-top: 25px;
+}
+
+.input-text {
+	margin-top: -30px
+}
+
+#__xmlview0--text_scan-cont0_0 {
+	text-align: center;
+}

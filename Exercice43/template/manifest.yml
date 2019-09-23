@@ -1,0 +1,12 @@
+---
+applications:
+- name: %APP_NAME%
+  host: %APP_HOST%
+  memory: 128M
+  disk_quota: 512M
+  timeout: 30
+  buildpack: python_buildpack
+services:
+- %SERVICE_INSTANCE_NAME%
+env:
+  MODEL_NAME: %MODEL_NAME%

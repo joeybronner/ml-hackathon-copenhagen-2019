@@ -1,0 +1,229 @@
+{
+	"_version": "1.3.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "${project.artifactId}",
+		"type": "application",
+		"resources": "resources.json",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"applicationVersion": {
+			"version": "${project.version}"
+		},
+		"ach": "XYZ",
+		"dataSources": {
+		}
+	},
+	"sap.fiori": {
+		"_version": "1.1.0",
+		"registrationIds": [
+			"F9999"
+		],
+		"archeType": "transactional"
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://task",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.2.0",
+		"rootView": {
+			"viewName": "sap.mlf.retraining.view.Main",
+			"type": "XML",
+			"id": "main"
+		},
+		"dependencies": {
+			"minUI5Version": "${sap.ui5.dist.version}",
+			"libs": {
+				"sap.collaboration": {
+					"minVersion": "1.36",
+					"lazy": true
+				},
+				"sap.m": {
+					"minVersion": "1.36.0"
+				},
+				"sap.ui.comp": {},
+				"sap.ui.core": {
+					"minVersion": "1.36.0"
+				},
+				"sap.ui.layout": {},
+				"sap.ui.table": {},
+				"sap.ushell": {
+					"minVersion": "1.36.0"
+				},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"config": {
+			"fullWidth" : true,
+			"sapFiori2Adaptation": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.mlf.retraining.i18n.i18n"
+				}
+			},
+			"authentication": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {
+					"defaultBindingMode": "TwoWay"
+				},
+				"preload": true
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "sap.mlf.retraining.view",
+				"controlAggregation": "pages",
+				"controlId": "main",
+				"bypassed": {
+					"target": [
+						"NotFound"
+					]
+				}
+			},
+			"routes": [
+				{
+					"pattern": "Main",
+					"name": "Main",
+					"target": [
+						"Main"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Main"
+					]
+				},
+				{
+					"pattern": "Jobs",
+					"name": "Jobs",
+					"target": [
+						"Jobs"
+					]
+				},
+				{
+					"pattern": "Jobs/{jobId}",
+					"name": "Job",
+					"target": [
+						"Job"
+					]
+				},
+				{
+					"pattern": "Models",
+					"name": "Models",
+					"target": [
+						"Models"
+					]
+				},
+				{
+					"pattern": "Models/{modelName}/{modelVersion}",
+					"name": "Model",
+					"target": [
+						"Model"
+					]
+				},
+				{
+					"pattern": "Models",
+					"name": "OldModel",
+					"target": [
+						"Model"
+					]
+				},
+				{
+					"pattern": "TrainingData",
+					"name": "TrainingData",
+					"target": [
+						"TrainingData"
+					]
+				}
+			],
+			"targets": {
+				"Main": {
+					"controlAggregation": "pages",
+					"viewName": "Main",
+					"viewId": "Main",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Jobs": {
+					"controlAggregation": "pages",
+					"viewName": "Jobs",
+					"viewId": "Jobs",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Job": {
+					"controlAggregation": "pages",
+					"viewName": "Job",
+					"viewId": "Job",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"Models": {
+					"controlAggregation": "pages",
+					"viewName": "Models",
+					"viewId": "Models",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"Model": {
+					"controlAggregation": "pages",
+					"viewName": "Model",
+					"viewId": "Model",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"TrainingData": {
+					"controlAggregation": "pages",
+					"viewName": "TrainingData",
+					"viewId": "TrainingData",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"OldModel": {
+					"controlAggregation": "pages",
+					"viewName": "App",
+					"viewId": "App",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"NotFound": {
+					"viewName": "NotFound",
+					"viewId": "notFound"
+				}
+			}
+		},
+		"resources": {
+		}
+	}
+}
