@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://coil.sap.com">
-    <img src="http://blogs.saphana.com/wp-content/uploads/2017/09/Picture1-1.png" alt="SAP Machine Learning" width=356 height=256>
+    <img src="http://blogs.saphana.com/wp-content/uploads/2017/09/Picture1-1.png" alt="SAP Machine Learning" width=356 height=156>
 
   </a>
   <h1 align="center">SAP Machine Learning</h1>
@@ -17,9 +17,9 @@
 #### Model Retrain
 
 - [Step 1 - SAP Cloud Cockpit](#step-1---SAP_Cloud_Cockpit)
-- [Step 2 - Re-train Image Classification with sapml](#step-2---Re-train-Image-Classification-with-sapml)
+- [Step 2 - Re-train Image Classification with sapml](#step-2---Retrain-Image-Classification)
 - [Step 3 - SAPML CF plugin](#step-3---SAPML-CF-plugin)
-- [Step 4 (Optional) Uploading images before retraining 1](#step-5---Uploading-images-before-retraining-1)
+- [Step 4 (Optional) Uploading images before retraining 1](#step-4---Uploading-images-before-retraining-1)
 - [Step 5 Install Minio](#step-5---Install-Minio)
 - [Step 6 Submit a retraining job](#step-6---Submit-a-Retraining-job)
 - [Step 7 Deploying the model](#step-7---Deploying-the-model)
@@ -60,7 +60,7 @@ cf login -a api.cf.us10.hana.ondemand.com -u ml-train+us-112@sap.com
 ## Listing all Services 
 Cf services
 
-<a name="#step-2---Re-train-Image-Classification-with-sapml"></a>
+<a name="step-2---Retrain-Image-Classification"></a>
 
 # Step 2  Re-train Image Classification with sapml
 
