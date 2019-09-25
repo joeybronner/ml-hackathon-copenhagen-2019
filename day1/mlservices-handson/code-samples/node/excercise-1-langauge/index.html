@@ -10,8 +10,7 @@
 		if(input){
 			$.post( "/api/detect", JSON.stringify({message: input}), function( data ) {
 				var detection =JSON.parse(data).detections[0];//assume the first and take it.
-				var msg = detection.langStr + " (" + detection.langCode + ")";
-				document.getElementById("textReceive").value = msg;
+				//your code goes here.
 			});
 		}
 	}
