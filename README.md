@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://coil.sap.com">
+  <a href="https://coil.sap.com" target="_blank">
     <img src="https://i.ibb.co/R9v8BcH/Stickers-Hackathon-Event.png" alt="SAP Nordic ML Hackathon Image" width=350 height=350>
   </a>
 
@@ -8,11 +8,11 @@
   <p align="center">
     Please note that these are examples for the purposes of training only. This repository will not be supported or maintained. Under code samples there are some simple examples that will be used to show how you can use LML in your applications.
     <br>
-    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=bug.md">Report bug</a>
+    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=bug.md" target="_blank">Report bug</a>
     ·
-    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=feature.md&labels=feature">Request feature</a>
+    <a href="https://github.com/joeybronner/ml-hackathon-copenhagen-2019/issues/new?template=feature.md&labels=feature" target="_blank">Request feature</a>
     ·
-    <a href="https://coil.sap.com">COIL Website</a>
+    <a href="https://coil.sap.com" target="_blank">COIL Website</a>
   </p>
 </p>
 
@@ -22,7 +22,7 @@
 
 <img src="img/agenda_overview.png" />
 <br />
-<a href="https://developers.sap.com/tutorials/hcp-create-trial-account.html">Get a Free Trial Account on SAP Cloud Platform</a>
+<a href="https://developers.sap.com/tutorials/hcp-create-trial-account.html" target="_blank">Get a Free Trial Account on SAP Cloud Platform</a>
 <br />
 
 ## Table of Contents
