@@ -21,6 +21,9 @@
 ## Agenda
 
 <img src="img/agenda_overview.png" />
+<br />
+<a href="https://developers.sap.com/tutorials/hcp-create-trial-account.html">Get a Free Trial Account on SAP Cloud Platform</a>
+<br />
 
 ## Table of Contents
 
