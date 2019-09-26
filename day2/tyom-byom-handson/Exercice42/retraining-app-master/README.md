@@ -1,6 +1,6 @@
-# retraining-app
+# Retraining-app
 
-This is an application to do retraining with the Machine Learning Foundation. Currently it focuses on image retraining.
+This is an application to do retraining with the Machine Learning Services. Currently it focuses on image retraining.
 
 ## Getting Started
 
@@ -9,7 +9,7 @@ This is an application to do retraining with the Machine Learning Foundation. Cu
 1. Clone Repository
 
 ```
-git clone https://github.wdf.sap.corp/ICN-ML/retraining-app.git
+git clone https://github.com/joeybronner/ml-hackathon-copenhagen-2019/day2/tyom-byom-hands-on/Exercice42/retraining-app-master.git
 ```
 
 2. Adjust the manifest.yml file to your needs
