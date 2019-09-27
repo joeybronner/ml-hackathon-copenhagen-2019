@@ -1,0 +1,3 @@
+[submodule "Teams/MLGC/MLGC"]
+	path = Teams/MLGC/MLGC
+	url = https://github.com/zohaib194/MLGC.git
